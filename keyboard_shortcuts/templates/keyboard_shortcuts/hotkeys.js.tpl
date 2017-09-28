@@ -11,7 +11,7 @@
         else if (event.srcElement) target = event.srcElement;
         if (target.nodeType == 3) // defeat Safari bug
                 target = target.parentNode;
-        if (special_disabled && (target.type === "text" || target.nodeName === "SELECT" || target.nodeName === "TEXTAREA")) {
+        if (special_disabled && (target.type === "text" || target.type === "email" || target.type === "password" || target.type === "number" || target.nodeName === "SELECT" || target.nodeName === "TEXTAREA")) {
             pressed_keys = [] // we reset pressed keys
             return
         }
